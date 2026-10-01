@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Dhruv Patel</title>
+  <meta name="description" content="Get in touch with Dhruv Patel - Frontend Developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Dhruv<span>.</span></a>
+      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="section-header text-center">
+          <h2>Get in Touch</h2>
+          <p>Looking for a Frontend Development Internship or want to connect? I'd love to hear from you.</p>
+        </div>
+
+        <div style="max-width: 520px; margin: 0 auto;">
+          <div class="card" style="text-align: center; padding: 2.5rem 2rem;">
+            <h3 style="margin-bottom: 0.75rem;">Let's connect</h3>
+            <p style="margin-bottom: 2rem;">
+              I'm a B.Tech CSE student actively seeking Frontend Development Internship opportunities. 
+              Reach out via email or connect with me on LinkedIn and GitHub.
+            </p>
+
+            <div class="contact-links" style="align-items: center;">
+              <a href="mailto:dhruvvpatel85@gmail.com">
+                <span>✉</span> dhruvvpatel85@gmail.com
+              </a>
+              <a href="https://github.com/dhruvpatel85" target="_blank" rel="noopener">
+                <span>⌥</span> github.com/dhruvpatel85
+              </a>
+              <a href="https://www.linkedin.com/in/dhruv-patel-a21107290" target="_blank" rel="noopener">
+                <span>in</span> linkedin.com/in/dhruv-patel-a21107290
+              </a>
+            </div>
+
+            <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--text-muted);">
+              Based in Valsad · Open to remote internships
+            </p>
+
+            <div style="margin-top: 2rem;">
+              <a href="mailto:dhruvvpatel85@gmail.com" class="btn btn-primary">Send Email</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Made by Dhruv Patel</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
