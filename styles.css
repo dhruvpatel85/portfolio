@@ -251,6 +251,8 @@ section {
 }
 
 /* Skills */
+/* Skills */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -261,9 +263,11 @@ section {
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 1.25rem 1rem;
+  padding: 1rem;
   text-align: center;
   transition: all var(--transition);
+  overflow: visible;
+  min-width: 0;
 }
 
 .skill-item:hover {
@@ -272,8 +276,53 @@ section {
 }
 
 .skill-item .icon {
-  font-size: 1.75rem;
-  margin-bottom: 0.5rem;
+    width: 100%;
+    height: 90px;
+    margin: 0 auto 0.75rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: visible;
+}
+
+.skill-item .icon img {
+    width: 80px;
+    height: 80px;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+}
+
+/* Move HTML, CSS and JavaScript slightly upward */
+.skill-item:nth-child(1) .icon img,
+.skill-item:nth-child(2) .icon img,
+.skill-item:nth-child(3) .icon img {
+    transform: translateY(-5px);
+}
+
+/* Keep React and Python safely inside the icon area */
+.skill-item:nth-child(4) .icon img,
+.skill-item:nth-child(5) .icon img {
+    transform: translateY(0);
+}
+
+/* Move PHP slightly downward */
+.skill-item:nth-child(6) .icon img {
+    transform: translateY(5px);
+}
+
+/* Move Excel slightly downward */
+.skill-item:nth-child(11) .icon img {
+    transform: translateY(5px);
+}
+
+/* Move Problem Solving slightly downward */
+.skill-item:nth-child(17) .icon img {
+    transform: translateY(5px);
 }
 
 .skill-item span {
@@ -281,7 +330,6 @@ section {
   font-weight: 500;
   color: var(--text-primary);
 }
-
 /* Experience / Timeline */
 .timeline {
   display: flex;
@@ -540,4 +588,39 @@ footer p {
 
 .animate {
   animation: fadeInUp 0.6s ease forwards;
+}
+
+/* ===== SKILL LOGO VERTICAL ALIGNMENT ===== */
+
+/* HTML, CSS, JavaScript - move UP */
+.skill-item .icon img[alt="HTML"],
+.skill-item .icon img[alt="CSS"],
+.skill-item .icon img[alt="JavaScript"] {
+    position: relative;
+    top: -6px !important;
+}
+
+/* React.js and Python - move UP so bottom is not cut */
+.skill-item .icon img[alt="React.js"],
+.skill-item .icon img[alt="Python"] {
+    position: relative;
+    top: -12px !important;
+}
+
+/* PHP - move DOWN */
+.skill-item .icon img[alt="PHP"] {
+    position: relative;
+    top: 5px !important;
+}
+
+/* Excel - move DOWN */
+.skill-item .icon img[alt="Excel"] {
+    position: relative;
+    top: 5px !important;
+}
+
+/* Problem Solving - move DOWN */
+.skill-item .icon img[alt="Problem Solving"] {
+    position: relative;
+    top: 5px !important;
 }
