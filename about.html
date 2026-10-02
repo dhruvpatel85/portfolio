@@ -7,20 +7,24 @@
   <meta name="description" content="About Dhruv Patel - Frontend Developer and B.Tech CSE student.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <nav>
     <div class="container nav-inner">
       <a href="index.html" class="logo">Dhruv Patel<span>.</span></a>
-      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">☾</button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+      </div>
     </div>
   </nav>
 
@@ -28,98 +32,86 @@
     <section>
       <div class="container">
         <div class="section-header">
-          <h2>About Me</h2>
-          <p>Frontend developer focused on building responsive and user-friendly web interfaces.</p>
+          <h1 style="font-size: clamp(2.25rem, 5vw, 3.25rem);">About me</h1>
         </div>
 
-        <div style="max-width: 720px; margin-bottom: 4rem;">
-          <p style="margin-bottom: 1.25rem;">
-            Motivated and detail-oriented B.Tech Computer Science Engineering student with a strong foundation in HTML, CSS, and JavaScript, along with working knowledge of React.js.
-          </p>
-          <p style="margin-bottom: 1.25rem;">
-            Skilled in developing responsive and user-friendly web interfaces through academic and personal projects. I enjoy turning ideas into clean, functional interfaces that work well across devices.
-          </p>
-          <p>
-            Currently seeking a Frontend Development Internship to gain hands-on industry experience, apply technical skills, and contribute to real-world web development projects.
-          </p>
-        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm a motivated, detail-oriented B.Tech Computer Science Engineering student with a strong foundation in HTML, CSS, and JavaScript, along with working knowledge of React.js.
+            </p>
+            <p>
+              I build responsive, user-friendly web interfaces through academic and personal projects. I enjoy turning ideas into clean, functional interfaces that work well on every device.
+            </p>
+            <p>
+              I'm currently looking for a Frontend Development Internship where I can gain hands-on industry experience, apply my skills, and contribute to real-world web projects.
+            </p>
+          </div>
 
+          <aside class="facts">
+            <dl>
+              <div><dt>Studying</dt><dd>B.Tech Computer Science Engineering</dd></div>
+              <div><dt>Based in</dt><dd>Valsad, India</dd></div>
+              <div><dt>Looking for</dt><dd>Frontend Development Internship</dd></div>
+              <div><dt>Email</dt><dd><a href="mailto:dhruvvpatel85@gmail.com">dhruvvpatel85@gmail.com</a></dd></div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="container">
         <div class="section-header">
           <h2>Skills</h2>
           <p>Technologies and soft skills I work with.</p>
         </div>
 
-        <div class="skills-grid" style="margin-bottom: 4rem;">
-          <div class="skill-item">
-            <div class="icon"><img src="images/html.png" alt="HTML"></div>
-            <span>HTML</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/css.png" alt="CSS"></div>
-            <span>CSS</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/javascript.png" alt="JavaScript"></div>
-            <span>JavaScript</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/ReactJs.png" alt="React.js"></div>
-            <span>React.js</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/Python.png" alt="Python"></div>
-            <span>Python</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/php.png" alt="PHP"></div>
-            <span>PHP</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/C++.png" alt="C/c++"></div>
-            <span>C / C++</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/java.png" alt="Java"></div>
-            <span>Java</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/csharp.png" alt="C#"></div>
-            <span>C#</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/bash.png" alt="Bash"></div>
-            <span>Bash</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/excel.png" alt="Excel"></div>
-            <span>Excel</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/Word.jpg" alt="Word"></div>
-            <span>Word</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/PowerPoint.png" alt="PowerPoint"></div>
-            <span>PowerPoint</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/Communication.png" alt="Communication"></div>
-            <span>Communication</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/Time Management.jpg" alt="Time Management"></div>
-            <span>Time Management</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/Team Work.png" alt="Team Work"></div>
-            <span>Team Work</span>
-          </div>
-          <div class="skill-item">
-            <div class="icon"><img src="images/Problem Solving.png" alt="Problem Solving"></div>
-            <span>Problem Solving</span>
+        <div class="skill-group">
+          <h3>Frontend</h3>
+          <div class="skills-grid">
+            <div class="skill-item"><div class="icon"><img src="images/html.png" alt=""></div><span>HTML</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/css.png" alt=""></div><span>CSS</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/javascript.png" alt=""></div><span>JavaScript</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/ReactJs.png" alt=""></div><span>React.js</span></div>
           </div>
         </div>
 
+        <div class="skill-group">
+          <h3>Programming languages</h3>
+          <div class="skills-grid">
+            <div class="skill-item"><div class="icon"><img src="images/Python.png" alt=""></div><span>Python</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/php.png" alt=""></div><span>PHP</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/C++.png" alt=""></div><span>C / C++</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/java.png" alt=""></div><span>Java</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/csharp.png" alt=""></div><span>C#</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/bash.png" alt=""></div><span>Bash</span></div>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Office tools</h3>
+          <div class="skills-grid">
+            <div class="skill-item"><div class="icon"><img src="images/excel.png" alt=""></div><span>Excel</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/Word.jpg" alt=""></div><span>Word</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/PowerPoint.png" alt=""></div><span>PowerPoint</span></div>
+          </div>
+        </div>
+
+        <div class="skill-group" style="margin-bottom: 0;">
+          <h3>Soft skills</h3>
+          <div class="skills-grid">
+            <div class="skill-item"><div class="icon"><img src="images/Communication.png" alt=""></div><span>Communication</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/Time Management.jpg" alt=""></div><span>Time Management</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/Team Work.png" alt=""></div><span>Team Work</span></div>
+            <div class="skill-item"><div class="icon"><img src="images/Problem Solving.png" alt=""></div><span>Problem Solving</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
         <div class="section-header">
           <h2>Experience</h2>
           <p>Currently focused on learning and building projects.</p>
@@ -129,9 +121,9 @@
           <div class="timeline-item">
             <div class="timeline-date">Present</div>
             <div class="timeline-content">
-              <h3>Fresher / Seeking Internship</h3>
-              <span class="company">Open to Frontend Development Internships</span>
-              <p>Actively looking for opportunities to apply my skills in a professional environment, contribute to real products, and grow as a frontend developer.</p>
+              <h3>Fresher, seeking internship</h3>
+              <span class="company">Open to Frontend Development</span>
+              <p>Looking for opportunities to apply my skills in a professional environment, contribute to real products, and grow as a frontend developer.</p>
             </div>
           </div>
           <div class="timeline-item">
@@ -148,17 +140,14 @@
   </main>
 
   <footer>
-    <div class="container">
+    <div class="container footer-inner">
       <p>Made by Dhruv Patel</p>
+      <div class="footer-links">
+        <a href="https://github.com/dhruvpatel85" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/dhruv-patel-a21107290" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:dhruvvpatel85@gmail.com">Email</a>
+      </div>
     </div>
   </footer>
-
-  <script>
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('open');
-      });
-    });
-  </script>
 </body>
 </html>

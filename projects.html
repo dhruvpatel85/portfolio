@@ -7,20 +7,24 @@
   <meta name="description" content="Projects by Dhruv Patel - Frontend Developer.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <nav>
     <div class="container nav-inner">
       <a href="index.html" class="logo">Dhruv Patel<span>.</span></a>
-      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">☾</button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+      </div>
     </div>
   </nav>
 
@@ -28,64 +32,44 @@
     <section>
       <div class="container">
         <div class="section-header">
-          <h2>Projects</h2>
+          <h1 style="font-size: clamp(2.25rem, 5vw, 3.25rem); margin-bottom: 0.75rem;">Projects</h1>
           <p>Academic and personal projects that demonstrate my skills in frontend development, full-stack applications, and problem solving.</p>
         </div>
 
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <article class="card project-card">
-            <div class="project-image"><img src="images/komal-ro.png" alt="Komal RO"></div>
-            <h3>Komal RO</h3>
-            <p>Komal RO System mobile application built with React Native (Expo) and FastAPI. Features customer services, product management, order handling, and admin functionality with secure JWT authentication.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">React Native</span>
-              <span class="tech-tag">Expo</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Axios</span>
-              <span class="tech-tag">JWT</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/dhruvpatel85/komal-ro" target="_blank" rel="noopener">GitHub →</a>
+        <div class="project-list">
+          <article class="project project--row">
+            <div class="project-media"><img src="images/komal-ro.png" alt="Komal RO app screens" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Komal RO</h3>
+              <p>Komal RO System mobile application built with React Native (Expo) and FastAPI. Features customer services, product management, order handling, and admin functionality with secure JWT authentication.</p>
+              <ul class="tags">
+                <li>React Native</li><li>Expo</li><li>FastAPI</li><li>Python</li><li>MySQL</li><li>Axios</li><li>JWT</li>
+              </ul>
+              <a class="link" href="https://github.com/dhruvpatel85/komal-ro" target="_blank" rel="noopener">View on GitHub</a>
             </div>
           </article>
 
-          <!-- Project 2 -->
-          <article class="card project-card">
-            <div class="project-image"><img src="images/Leaf Analyzer.png" alt="Leaf Analyzer"></div>
-            <h3>Leaf Analyzer</h3>
-            <p>AI-based web application for detecting potato leaf diseases using image analysis. Provides disease-specific solutions to help farmers take timely action. Built with a complete web stack and machine learning integration.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">PHP</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">Machine Learning</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/dhruvpatel85/leaf-analyzer" target="_blank" rel="noopener">GitHub →</a>
+          <article class="project project--row">
+            <div class="project-media"><img src="images/Leaf Analyzer.png" alt="Leaf Analyzer" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Leaf Analyzer</h3>
+              <p>AI-based web application for detecting potato leaf diseases using image analysis. Provides disease-specific solutions to help farmers take timely action. Built with a complete web stack and machine learning integration.</p>
+              <ul class="tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>Python</li><li>MySQL</li><li>Machine Learning</li>
+              </ul>
+              <a class="link" href="https://github.com/dhruvpatel85/leaf-analyzer" target="_blank" rel="noopener">View on GitHub</a>
             </div>
           </article>
 
-          <!-- Project 3 -->
-          <article class="card project-card">
-            <div class="project-image"><img src="images/Fitness Planner.png" alt="Fitness Planner"></div>
-            <h3>Fitness Planner</h3>
-            <p>Personalized diet, workout, and fitness progress tracking system. Helps users plan their fitness journey with a clean, responsive interface and backend data management.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">PHP</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">XAMPP</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/dhruvpatel85/fitness_planner" target="_blank" rel="noopener">GitHub →</a>
+          <article class="project project--row">
+            <div class="project-media"><img src="images/Fitness Planner.png" alt="Fitness Planner" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Fitness Planner</h3>
+              <p>Personalized diet, workout, and fitness progress tracking system. Helps users plan their fitness journey with a clean, responsive interface and backend data management.</p>
+              <ul class="tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li><li>XAMPP</li>
+              </ul>
+              <a class="link" href="https://github.com/dhruvpatel85/fitness_planner" target="_blank" rel="noopener">View on GitHub</a>
             </div>
           </article>
         </div>
@@ -94,17 +78,14 @@
   </main>
 
   <footer>
-    <div class="container">
+    <div class="container footer-inner">
       <p>Made by Dhruv Patel</p>
+      <div class="footer-links">
+        <a href="https://github.com/dhruvpatel85" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/dhruv-patel-a21107290" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:dhruvvpatel85@gmail.com">Email</a>
+      </div>
     </div>
   </footer>
-
-  <script>
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('open');
-      });
-    });
-  </script>
 </body>
 </html>

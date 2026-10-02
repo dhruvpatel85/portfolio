@@ -7,41 +7,58 @@
   <meta name="description" content="Portfolio of Dhruv Patel - Frontend Developer and B.Tech CSE student specializing in HTML, CSS, JavaScript, and React.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js"></script>
 </head>
 <body>
   <nav>
     <div class="container nav-inner">
       <a href="index.html" class="logo">Dhruv Patel<span>.</span></a>
-      <button class="menu-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Switch theme">☾</button>
+        <button class="icon-btn menu-toggle" type="button" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">☰</button>
+      </div>
     </div>
   </nav>
 
   <main>
     <section class="hero">
-      <div class="container">
-        <div class="hero-badge">
-          <span>●</span> Open to Frontend Internships
+      <div class="container hero-grid">
+        <div>
+          <div class="status">Open to Frontend Development Opportunity</div>
+          <h1>I build responsive, user-friendly web interfaces.</h1>
+          <span class="name">Hi, I'm Dhruv Patel.</span>
+          <p class="hero-subtitle">
+            B.Tech Computer Science Engineering (4th year) Student with a strong foundation in HTML, CSS, and JavaScript,
+            and working knowledge of React.JS. I'm looking for an opportunity to gain hands-on industry experience and contribute to modern web projects.
+          </p>
+          <div class="hero-cta">
+            <a href="projects.html" class="btn btn-primary">View projects</a>
+            <a href="contact.html" class="btn btn-secondary">Get in touch</a>
+          </div>
         </div>
-        <h1>Hi, I'm <span class="accent">Dhruv Patel</span></h1>
-        <p class="hero-subtitle">
-          Motivated and detail-oriented B.Tech (4th Year) student with a
-          strong foundation in HTML, CSS, and JavaScript, and working
-          knowledge of React.js. Passionate about building responsive and
-          user-friendly web applications. Looking for an Internship to gain
-          hands-on industry experience and contribute effectively to modern
-          web development projects.
-        </p>
-        <div class="hero-cta">
-          <a href="projects.html" class="btn btn-primary">View Projects →</a>
-          <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="window">
+            <div class="window-bar"><i></i><i></i><i></i><span>dhruv.js</span></div>
+            <div class="code">
+              <span class="line" style="--i:0"><span class="c">// who I am, in code</span></span>
+              <span class="line" style="--i:1"><span class="k">const</span> dhruv = {</span>
+              <span class="line" style="--i:2">  role: <span class="s">"Frontend developer"</span>,</span>
+              <span class="line" style="--i:3">  stack: [<span class="s">"HTML"</span>, <span class="s">"CSS"</span>, <span class="s">"JavaScript"</span>, <span class="s">"React"</span>],</span>
+              <span class="line" style="--i:4">  studying: <span class="s">"B.Tech CSE, 4th year"</span>,</span>
+              <span class="line" style="--i:5">  location: <span class="s">"Valsad, India"</span>,</span>
+              <span class="line" style="--i:6">  openTo: <span class="s">"Frontend internships"</span>,</span>
+              <span class="line" style="--i:7">};</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -49,86 +66,74 @@
     <section>
       <div class="container">
         <div class="section-header">
-          <h2>Featured Projects</h2>
-          <p>Academic and personal projects that showcase my frontend and full-stack skills.</p>
+          <h2>Featured projects</h2>
+          <p>Academic and personal projects that show my frontend and full-stack skills.</p>
         </div>
-        <div class="projects-grid">
-          <article class="card project-card">
-            <div class="project-image"><img src="images/komal-ro.png" alt="Komal RO"></div>
-            <h3>Komal RO</h3>
-            <p>Mobile application for RO system management featuring customer services, product management, orders, and admin functionality.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">React Native</span>
-              <span class="tech-tag">Expo</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">MySQL</span>
-              <span class="tech-tag">JWT</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/dhruvpatel85/komal-ro" target="_blank" rel="noopener">GitHub →</a>
+
+        <div class="project-grid">
+          <article class="project project--row">
+            <div class="project-media"><img src="images/komal-ro.png" alt="Komal RO app screens" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Komal RO</h3>
+              <p>Mobile application for RO system management with customer services, product management, orders, and admin functionality.</p>
+              <ul class="tags">
+                <li>React Native</li><li>Expo</li><li>FastAPI</li><li>MySQL</li><li>JWT</li>
+              </ul>
+              <a class="link" href="https://github.com/dhruvpatel85/komal-ro" target="_blank" rel="noopener">View on GitHub</a>
             </div>
           </article>
 
-          <article class="card project-card">
-            <div class="project-image"><img src="images/Leaf Analyzer.png" alt="Leaf Analyzer"></div>
-            <h3>Leaf Analyzer</h3>
-            <p>AI-based web application that detects potato leaf diseases using image analysis and provides disease-specific solutions.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">PHP</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">ML</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/dhruvpatel85/leaf-analyzer" target="_blank" rel="noopener">GitHub →</a>
+          <article class="project">
+            <div class="project-media"><img src="images/Leaf Analyzer.png" alt="Leaf Analyzer" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Leaf Analyzer</h3>
+              <p>AI-based web application that detects potato leaf diseases from images and suggests disease-specific solutions.</p>
+              <ul class="tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>Python</li><li>ML</li>
+              </ul>
+              <a class="link" href="https://github.com/dhruvpatel85/leaf-analyzer" target="_blank" rel="noopener">View on GitHub</a>
             </div>
           </article>
 
-          <article class="card project-card">
-            <div class="project-image"><img src="images/Fitness Planner.png" alt="Fitness Planner"></div>
-            <h3>Fitness Planner</h3>
-            <p>Personalized diet, workout, and fitness progress tracking system built with a clean and responsive interface.</p>
-            <div class="tech-tags">
-              <span class="tech-tag">HTML</span>
-              <span class="tech-tag">CSS</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">PHP</span>
-              <span class="tech-tag">MySQL</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/dhruvpatel85/fitness_planner" target="_blank" rel="noopener">GitHub →</a>
+          <article class="project">
+            <div class="project-media"><img src="images/Fitness Planner.png" alt="Fitness Planner" loading="lazy"></div>
+            <div class="project-body">
+              <h3>Fitness Planner</h3>
+              <p>Personalized diet, workout, and progress tracking system with a clean, responsive interface.</p>
+              <ul class="tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li>
+              </ul>
+              <a class="link" href="https://github.com/dhruvpatel85/fitness_planner" target="_blank" rel="noopener">View on GitHub</a>
             </div>
           </article>
         </div>
-        <div class="text-center" style="margin-top: 2.5rem;">
-          <a href="projects.html" class="btn btn-secondary">View All Projects</a>
+
+        <div style="margin-top: 2.5rem;">
+          <a href="projects.html" class="btn btn-secondary">See all projects</a>
         </div>
       </div>
     </section>
 
-    <section style="background: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-      <div class="container text-center">
-        <h2>Let's work together</h2>
-        <p class="mb-4" style="max-width: 480px; margin: 0 auto 1.5rem;">I'm actively looking for Frontend Development Internship opportunities. Feel free to reach out!</p>
-        <a href="contact.html" class="btn btn-primary">Contact Me</a>
+    <section>
+      <div class="container">
+        <div class="cta">
+          <h2>Let's work together</h2>
+          <p>I'm looking for a Frontend Development Internship. If you're hiring or just want to say hi, send me a message.</p>
+          <a href="contact.html" class="btn btn-primary">Contact me</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
+    <div class="container footer-inner">
       <p>Made by Dhruv Patel</p>
+      <div class="footer-links">
+        <a href="https://github.com/dhruvpatel85" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/dhruv-patel-a21107290" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:dhruvvpatel85@gmail.com">Email</a>
+      </div>
     </div>
   </footer>
-
-  <script>
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        document.querySelector('.nav-links').classList.remove('open');
-      });
-    });
-  </script>
 </body>
 </html>
